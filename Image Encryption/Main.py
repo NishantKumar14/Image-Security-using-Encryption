@@ -26,8 +26,7 @@ def encrypt_image():
 
         image = bytearray(image)  # Converting pixel data into bytearray
         # XOR
-        for index, value in enumerate(
-                image):  # Enumerate methode will provide all value of data that store in image variable
+        for index, value in enumerate(image):  # Enumerate methode will provide all value of data that store in image variable
             image[index] = value ^ int(key)
         file = open(file_name, 'wb')  # Saving the file after writing the value
         file.write(image)
